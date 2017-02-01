@@ -1,0 +1,10 @@
+通过命令 git init 把这个目录变成git可以管理的仓库
+使用命令 git add 文件名 添加到暂存区里面去
+用命令 git commit -m "注释" 告诉Git，把文件提交到仓库。
+我们下面可以通过命令 git status 来查看是否还有文件未提交
+接下来我想看下readme.txt文件到底改了什么内容，如何查看呢？可以使用如下命令：git diff readme.txt
+ git log命令显示从最近到最远的显示日志
+第一种是：git reset  –hard HEAD^ 那么如果要回退到上上个版本只需把HEAD^ 改成 HEAD^^ 以此类推。那如果要回退到前100个版本的话，使用上面的方法肯定不方便，我们可以使用下面的简便命令操作：git reset  –hard HEAD~100 即可。未回退之前的readme.txt内容如下：
+再来查看下 readme.txt内容如下：通过命令cat readme.txt查看
+git reset  –hard 版本号 ，但是现在的问题假如我已经关掉过一次命令行或者333内容的版本号我并不知道呢？要如何知道增加3333内容的版本号呢？可以通过如下命令即可获取到版本号：git reflog 
+git push origin master 推送到github
